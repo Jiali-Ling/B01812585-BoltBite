@@ -165,13 +165,11 @@ Permissions: Browse restaurants only
 
 ### Public URL
 
-HTTPS: https://ec2-54-227-100-75.compute-1.amazonaws.com
+HTTPS: https://b01812585-uws24.duckdns.org
 
 Note: The site uses a self-signed SSL certificate. Browsers will display a security warning. Click Advanced and then Proceed to site to continue.
 
 HTTP requests automatically redirect to HTTPS.
-
-**Important:** If the URL above is not accessible, please check the current EC2 instance's public DNS in AWS Console. EC2 public DNS may change when the instance is restarted.
 
 ## Key Features
 
