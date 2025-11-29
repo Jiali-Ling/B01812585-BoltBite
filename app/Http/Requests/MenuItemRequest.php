@@ -20,7 +20,7 @@ class MenuItemRequest extends FormRequest
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'status' => 'required|in:on_shelf,off_shelf',
-            'image' => 'nullable|image|max:4096',
+            'image' => 'nullable|image|max:10240', // 10MB
         ];
     }
 }

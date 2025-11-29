@@ -56,7 +56,7 @@
                             or drag and drop
                         </p>
                         <p class="text-xs text-gray-500 mt-1">
-                            PNG, JPG, GIF up to 2MB
+                            PNG, JPG, GIF up to 10MB
                         </p>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ class ImageUploadService
         return false;
     }
 
-    public function validate(UploadedFile $file, int $maxSizeMB = 2): array
+    public function validate(UploadedFile $file, int $maxSizeMB = 10): array
     {
         $errors = [];
 

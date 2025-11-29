@@ -178,7 +178,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Image</label>
                         <input type="file" name="image" accept="image/*" class="w-full border @error('image') border-red-500 @else border-gray-300 @enderror rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-red-500">
-                        <p class="text-xs text-gray-500 mt-1">Select a file to upload (PNG, JPG, GIF up to 2MB)</p>
+                        <p class="text-xs text-gray-500 mt-1">Select a file to upload (PNG, JPG, GIF up to 10MB)</p>
                         @error('image')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                         @enderror

@@ -146,32 +146,32 @@
 
                 @if($featuredRestaurants->count() > 0)
                     <div class="grid md:grid-cols-3 gap-10">
-                        @foreach($featuredRestaurants as $restaurant)
-                            <a href="{{ route('restaurants.show', $restaurant) }}" class="group block bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="relative w-full" style="height: 180px; background-color: #e5e7eb; overflow: hidden;">
-                                    @if($restaurant->image)
-                                        <img src="{{ asset($restaurant->image) }}" alt="{{ $restaurant->name }}" class="w-full h-full" style="object-fit: cover; height: 180px; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" loading="lazy">
-                                    @else
-                                        <div class="w-full h-full bg-gray-300 flex items-center justify-center">
-                                            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                                            </svg>
-                                        </div>
-                                    @endif
+@foreach($featuredRestaurants as $restaurant)
+                        <a href="{{ route('restaurants.show', $restaurant) }}" class="group block bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="relative w-full" style="height: 180px; background-color: #e5e7eb; overflow: hidden;">
+                                @if($restaurant->image)
+                                    <img src="{{ asset($restaurant->image) }}" alt="{{ $restaurant->name }}" class="w-full h-full" style="object-fit: cover; height: 180px; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" loading="lazy">
+                                @else
+                                    <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                                        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                        </svg>
+                                    </div>
+                                @endif
                                     <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full font-semibold text-sm flex items-center shadow-md">
-                                        <span class="mr-1">⭐</span> {{ number_format($restaurant->rating ?? 4.5, 1) }}
-                                    </div>
+                                    <span class="mr-1">⭐</span> {{ number_format($restaurant->rating ?? 4.5, 1) }}
                                 </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-500 transition">{{ $restaurant->name }}</h3>
-                                    <p class="text-gray-600 text-sm mb-4">{{ Str::limit($restaurant->description ?? '', 80) }}</p>
-                                    <div class="flex items-center justify-between text-sm text-gray-500">
-                                        <span>⭐ Rating: {{ number_format($restaurant->rating ?? 4.5, 1) }}</span>
-                                    </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-500 transition">{{ $restaurant->name }}</h3>
+                                <p class="text-gray-600 text-sm mb-4">{{ Str::limit($restaurant->description ?? '', 80) }}</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span>⭐ Rating: {{ number_format($restaurant->rating ?? 4.5, 1) }}</span>
                                 </div>
-                            </a>
-                        @endforeach
-                    </div>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
                 @else
                     <div class="text-center py-12">
                         <p class="text-gray-600 text-lg">No featured restaurants available at the moment.</p>
