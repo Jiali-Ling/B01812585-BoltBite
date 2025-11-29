@@ -1,0 +1,62 @@
+@import url('https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+        @apply bg-gray-50 text-gray-900;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply tracking-tight;
+    }
+}
+
+@layer components {
+    .content-shell {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .section-spacing {
+        @apply py-10 sm:py-14 lg:py-16;
+    }
+
+    .menu-card {
+        @apply bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow;
+    }
+
+    .menu-card__image {
+        @apply relative w-full bg-gray-100 overflow-hidden;
+    }
+
+    .menu-card__body {
+        @apply p-5 space-y-3 text-sm text-gray-600;
+    }
+
+    .pill {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+    }
+
+    .headline-xl {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.1;
+        font-weight: 600;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.2;
+        font-weight: 600;
+    }
+
+    .subheading {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: #4b5563;
+    }
+}
