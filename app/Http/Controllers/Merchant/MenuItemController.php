@@ -122,11 +122,13 @@ class MenuItemController extends Controller
         $this->authorize('update', $menuItem);
         abort_unless($menuItem->restaurant_id === $restaurant->id, 404);
 
+        $newStatus = $menuItem->status === 'on_shelf' ? 'off_shelf' : 'on_shelf';
         $menuItem->update([
-            'status' => $menuItem->status === 'on_shelf' ? 'off_shelf' : 'on_shelf',
+            'status' => $newStatus,
         ]);
 
-        return redirect()->route('merchant.menu.index', $restaurant)->with('status', 'Shelf status updated.');
+        $message = $newStatus === 'off_shelf' ? 'Item taken off shelf successfully.' : 'Item put on shelf successfully.';
+        return redirect()->route('merchant.menu.index', $restaurant)->with('success', $message);
     }
 }
 
