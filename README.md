@@ -2,7 +2,7 @@
 
 ## Project Introduction
 
-BoltBite is a comprehensive food delivery platform built with Laravel. The system supports multiple user roles including administrators, merchants, regular users, and guests. 
+BoltBite is a comprehensive food delivery platform built with Laravel. The system supports multiple user roles including administrators, merchants, and regular users. 
 
 Client-side features:
 - Browse restaurants and menu items
@@ -24,7 +24,7 @@ CRUD: Complete MenuItem CRUD with validation and error handling. Order creation 
 
 Migration: All database changes in migrations. 21 migrations executed including orders, order_items, comments, delivery_events, users.role.
 
-Auth/Policy: Laravel Breeze authentication. User roles (admin, merchant, user, guest). Policy-based authorization with can middleware. Merchants cannot comment. Merchants can only manage their own items.
+Auth/Policy: Laravel Breeze authentication. User roles (admin, merchant, user). Policy-based authorization with can middleware. Merchants cannot comment. Merchants can only manage their own items.
 
 Upload/Replace: Image upload service with validation and resizing. Old files deleted on update. storage:link configured. Supports both old and new image formats.
 
@@ -156,12 +156,6 @@ Email: user@boltbite.com
 Password: password
 Role: User
 Permissions: Browse restaurants, add to cart, leave reviews
-
-Guest:
-Email: guest@boltbite.com
-Password: password
-Role: Guest
-Permissions: Browse restaurants only
 
 ### Public URL
 

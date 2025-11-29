@@ -25,11 +25,6 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Regular User', 'password' => bcrypt('password'), 'role' => 'user']
         );
 
-        User::firstOrCreate(
-            ['email' => 'guest@boltbite.com'],
-            ['name' => 'Guest User', 'password' => bcrypt('password'), 'role' => 'guest']
-        );
-
         $this->callWith(\Database\Seeders\RestaurantSeeder::class, ['ownerId' => $merchant->id]);
     }
 }
