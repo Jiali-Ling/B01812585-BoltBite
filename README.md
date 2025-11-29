@@ -159,16 +159,11 @@ Permissions: Browse restaurants, add to cart, leave reviews
 
 ### Public URL
 
-Primary URL (Stable):
 HTTPS: https://b01812585-uws24.duckdns.org
-
-Alternative URL (EC2 Public DNS):
-HTTPS: https://ec2-54-227-100-75.compute-1.amazonaws.com
 
 Note: 
 The site uses a self-signed SSL certificate. Browsers will display a security warning. Click Advanced and then Proceed to site to continue.
 HTTP requests automatically redirect to HTTPS.
-If DuckDNS URL is not accessible, please use the EC2 URL above or check AWS Security Group settings (ports 80 and 443 must be open).
 
 ## Key Features
 
