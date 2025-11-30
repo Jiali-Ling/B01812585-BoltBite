@@ -22,7 +22,7 @@ Merchant-side features:
 
 CRUD: Complete MenuItem CRUD with validation and error handling. Order creation and viewing with delivery timeline. Comment creation and deletion.
 
-Migration: All database changes in migrations. 21 migrations executed including orders, order_items, comments, delivery_events, users.role.
+Migration: All database changes in migrations. 24 migrations executed including orders, order_items, comments, delivery_events, users.role.
 
 Auth/Policy: Laravel Breeze authentication. User roles (admin, merchant, user). Policy-based authorization with can middleware. Merchants cannot comment. Merchants can only manage their own items.
 
