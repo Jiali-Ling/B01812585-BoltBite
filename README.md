@@ -30,7 +30,7 @@ Upload/Replace: Image upload service with validation and resizing. Old files del
 
 Delivery Progress: Delivery events table tracks order status changes. Timeline displayed in order details. Automatic event creation on status updates.
 
-AWS+HTTPS: Deployed on AWS EC2. Nginx configured with HTTPS. HTTP to HTTPS redirection. SSL certificate configured.
+AWS+HTTPS: Deployed on AWS EC2. Apache configured with HTTPS. HTTP to HTTPS redirection. SSL certificate configured (self-signed).
 
 ## Local Run
 
