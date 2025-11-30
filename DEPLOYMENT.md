@@ -34,7 +34,7 @@ npm install
 npm run build
 
 6. Configure environment:
-cp .env.example .env
+Create .env file with required configuration
 php artisan key:generate
 
 Edit .env file with production settings:
