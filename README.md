@@ -51,8 +51,8 @@ composer install
 3. Install Node.js dependencies:
 npm install
 
-4. Copy environment file:
-cp .env.example .env
+4. Create environment file:
+Create a `.env` file based on your configuration needs. See the deployment documentation for required environment variables.
 
 5. Generate application key:
 php artisan key:generate

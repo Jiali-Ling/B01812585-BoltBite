@@ -32,7 +32,7 @@ if [ -f .env ]; then
         echo "APP_KEY not set, run: php artisan key:generate"
     fi
 else
-    echo ".env file does not exist, run: cp .env.example .env"
+    echo ".env file does not exist, please create it with required configuration"
 fi
 echo ""
 
