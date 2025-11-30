@@ -84,7 +84,7 @@
                                 <div class="menu-card">
                                     <div class="menu-card__image" style="height: 160px;">
                                         @if($item->image_url)
-                                            <img src="{{ $item->image_url }}" alt="{{ $item->name }}" class="w-full h-full" style="object-fit: cover; height: 160px; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" loading="lazy">
+                                            <img src="{{ $item->image_url }}" alt="{{ $item->name }}" class="w-full h-full" style="object-fit: cover; height: 160px; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" loading="lazy" decoding="async">
                                         @else
                                             <div class="w-full h-full flex items-center justify-center bg-gray-200">
                                                 <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

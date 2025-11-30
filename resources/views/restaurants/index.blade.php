@@ -54,7 +54,7 @@
                     <a href="{{ route('restaurants.show', $restaurant->id) }}" class="group block bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                         <div class="relative w-full bg-gray-200" style="height: 180px; overflow: hidden;">
                             @if($restaurant->image)
-                                <img src="{{ asset($restaurant->image) }}" alt="{{ $restaurant->name }}" class="restaurant-card-image w-full" loading="lazy">
+                                <img src="{{ asset($restaurant->image) }}" alt="{{ $restaurant->name }}" class="restaurant-card-image w-full" loading="lazy" decoding="async" style="object-fit: cover; height: 180px;">
                             @else
                                 <div class="w-full h-full flex items-center justify-center bg-gray-300">
                                     <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
