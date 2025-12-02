@@ -30,11 +30,12 @@ class MenuItemPolicy
         if ($user->isAdmin()) {
             return true;
         }
-
+        if (!$user->isMerchant()) {
+            return false;
+        }
         $menuItem->loadMissing('restaurant');
-        $ownerId = $menuItem->restaurant?->user_id ?? $menuItem->user_id;
-
-        return $user->isMerchant() && $ownerId === $user->id;
+        
+        return $menuItem->restaurant && $menuItem->restaurant->user_id === $user->id;
     }
 }
 
